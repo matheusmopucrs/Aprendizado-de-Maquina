@@ -53,21 +53,51 @@ O foco central deste trabalho é explorar a **interpretabilidade** de modelos de
 
 ### 1. K-Nearest Neighbors (KNN)
 
-- Modelo baseado na proximidade dos dados no espaço de features, sem gerar regras explícitas.  
-- Interpretabilidade global limitada, pois não há coeficientes ou estruturas interpretáveis diretamente.  
+- Modelo baseado na proximidade dos dados no espaço de features, sem gerar regras explícitas.
+- Interpretabilidade limitada, pois não há coeficientes ou estruturas interpretáveis diretamente.  
 - Utilização das ferramentas **LIME** e **SHAP** para explicação local das predições, identificando quais features influenciam mais a decisão para cada instância individual.
+- Imagem de Referência:
+  
+  <img width="526" height="609" alt="image" src="https://github.com/user-attachments/assets/26c43370-e637-4695-b9d1-feccacb19928" />
+
+Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **taticamente coerentes** com a realidade do futebol. As *features* mais importantes influenciam a classificação exatamente na direção esperada para cada posição.
+
+| Feature | Direção de Alto Valor (Cor Rosa/Vermelha) | Impacto na Previsão | Coerência Tática |
+| :--- | :--- | :--- | :--- |
+| **xG/90s** (Gols Esperados por 90 min) | Alto valor | Puxa a previsão para **posições ofensivas (Atacantes)**. | Maior volume de chances de gol é a métrica primária de um atacante. |
+| **Clr/90s** (Cortas/Clearances por 90 min) | Alto valor | Puxa a previsão para **posições defensivas (Defensores)**. | Ações defensivas primárias, esperadas de zagueiros e laterais defensivos. |
+| **PrgP/90s** (Passes Progressivos por 90 min) | Alto valor | Puxa a previsão para **posições de Meio-Campo** (Meias e Volantes). | Indicador-chave de jogadores que constroem o jogo e conectam a defesa ao ataque. |
+ 
+- Considerações Finais: Ele funciona com base na proximidade dos dados no espaço das features, ou seja, classifica uma nova amostra olhando para os seus vizinhos mais próximos, o que é intuitivo localmente, mas difícil de resumir globalmente.
+
+
 
 ### 2. Árvore de Decisão
+ 
+- Realizamos uma análise detalhada da árvore gerada, o que possibilitou identificar as features mais importantes e compreender como cada uma delas influencia o processo de classificação.
+-  Imagem de Referência:
+     
+ <img width="853" height="563" alt="image" src="https://github.com/user-attachments/assets/9158fe35-0e83-453a-9502-59e4cfeb99a6" />
+  
+- A visualização gráfica da árvore facilita a compreensão do fluxo de decisões tomadas pelo modelo, permitindo a extração de insights claros sobre as regras que determinam a classificação.
+-  Imagem de Referência:
+     
+<img width="1256" height="650" alt="image" src="https://github.com/user-attachments/assets/053dc64c-5537-4a0e-a689-96a1494f8042" /> 
 
-- Modelo altamente interpretável que gera regras de decisão claras e visualizáveis.  
-- Análise da árvore permite identificar quais features são mais importantes e como elas influenciam a classificação.  
-- Visualização gráfica da árvore facilita a compreensão do processo de decisão e a extração de insights.
 
+- Considerações Finais: A Árvore de Decisão é um modelo altamente interpretável, pois estrutura suas decisões em regras simples e hierárquicas que podem ser facilmente visualizadas e entendidas. Essa transparência torna o modelo especialmente útil para aplicações que exigem explicações claras e confiáveis das decisões automatizadas, como demonstrado nas imagens de referência acima.
+
+  
 ### 3. Naïve Bayes (GaussianNB)
 
-- Modelo probabilístico que assume independência condicional entre as features.  
-- Interpretabilidade baseada na análise das médias e variâncias das features para cada classe, mostrando como as probabilidades condicionais afetam as predições.  
-- Limitação importante: a suposição de independência pode não refletir a realidade, impactando a precisão do modelo.
+- O modelo Naïve Bayes é altamente interpretável, pois baseia suas decisões em probabilidades condicionais calculadas a partir das distribuições das features em cada classe.
+- A visualização dessas estatísticas por meio de heatmaps permite identificar facilmente quais features possuem valores médios significativamente diferentes entre as classes, evidenciando sua importância para a classificação.
+- -  Imagem de Referência:
+     
+<img width="1034" height="362" alt="image" src="https://github.com/user-attachments/assets/65396cae-2b56-43b9-843c-17a9c49fac80" />
+
+Obs. Entretanto, a hipótese de independência entre as features, embora simplifique o modelo e aumente sua interpretabilidade, pode limitar sua precisão em casos onde as variáveis são correlacionadas.
+
 
 ---
 
@@ -75,9 +105,9 @@ O foco central deste trabalho é explorar a **interpretabilidade** de modelos de
 
 - O **KNN** apresentou a melhor acurácia (~94%), porém sua interpretabilidade é limitada, exigindo o uso de técnicas externas para explicação local das decisões.  
 - A **Árvore de Decisão** teve desempenho competitivo (~90%) e alta interpretabilidade, com regras claras e fácil visualização das features mais influentes.  
-- O **Naïve Bayes**, apesar de mais simples, entregou resultados razoáveis (~88%) e permitiu uma análise probabilística das decisões, embora a suposição de independência das variáveis seja uma limitação.
+- O **Naïve Bayes**, apesar de mais simples, entregou resultados razoáveis (~88%) e permitiu uma análise probabilística das decisões.
 
-Concluímos que a escolha do modelo ideal depende do equilíbrio desejado entre performance e interpretabilidade. Em contextos críticos, como saúde ou direito, a explicabilidade pode ser mais importante que a acurácia máxima. Ferramentas como **SHAP** e **LIME** são essenciais para interpretar modelos menos transparentes e aumentar a confiança nas decisões automatizadas.
+Concluímos que a escolha do modelo ideal depende do equilíbrio desejado entre performance e interpretabilidade. Em certos contextos críticos, a explicabilidade pode ser mais importante que a acurácia máxima. Apresar de não estarmos satisfeitos com as métricas do Naïve Bayes, ele pode ser muito útil, já que sua alta iterpretabilidade pode favorecer em cenários específicos.
 
 ---
 
