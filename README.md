@@ -1,4 +1,3 @@
-```markdown
 # Trabalho T1: Interpretabilidade de Modelos de Aprendizado de Máquina
 
 **Matéria:** Aprendizado de Máquina  
@@ -33,13 +32,13 @@ O foco central deste trabalho é explorar a **interpretabilidade** de modelos de
    - Aplicação do escalonamento e transformação dos dados utilizando o método **Yeo-Johnson** para aproximar a distribuição das features à normalidade, beneficiando o desempenho dos modelos.
 
 2. **Treinamento e Avaliação:**  
-   - Utilização do método **RFECV (Recursive Feature Elimination with Cross-Validation)** para identificar as features mais importantes e reduzir dimensionalidade.  
+   - Utilização do método **RFECV (Recursive Feature Elimination with Cross-Validation)** para identificar as features mais importantes.  
    - Otimização dos hiperparâmetros do KNN e da Árvore de Decisão por meio de **GridSearchCV**, garantindo a melhor configuração para cada modelo.  
    - Treinamento do Naïve Bayes, que não requer ajuste complexo de hiperparâmetros.  
    - Avaliação dos modelos utilizando métricas robustas: acurácia, precisão, recall e F1-score, para garantir uma análise completa do desempenho.
 
 3. **Interpretabilidade:**  
-   - Aplicação das técnicas **LIME** e **SHAP** para interpretar predições individuais do KNN, dada sua natureza de “caixa-preta”.  
+   - Aplicação das técnicas **LIME** e **SHAP** para interpretar predições individuais do KNN.  
    - Visualização da estrutura da Árvore de Decisão e análise das features mais influentes, facilitando a compreensão das regras de decisão.  
    - Análise das médias e variâncias das features por classe no Naïve Bayes, permitindo entender como as probabilidades condicionais impactam as previsões.
 
