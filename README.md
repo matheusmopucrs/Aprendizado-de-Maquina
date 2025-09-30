@@ -83,7 +83,9 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **c
      
  <img width="853" height="563" alt="image" src="https://github.com/user-attachments/assets/9158fe35-0e83-453a-9502-59e4cfeb99a6" />
 
- --
+
+
+
   
 - A visualização gráfica da árvore facilita a compreensão do fluxo de decisões tomadas pelo modelo, permitindo a extração de insights claros sobre as regras que determinam a classificação.
 -  Imagem de Referência:
@@ -106,6 +108,9 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **c
 - -  Imagem de Referência:
      
 <img width="1034" height="362" alt="image" src="https://github.com/user-attachments/assets/65396cae-2b56-43b9-843c-17a9c49fac80" />
+
+
+
 
 Obs. Entretanto, a hipótese de independência entre as features, embora simplifique o modelo e aumente sua interpretabilidade, pode limitar sua precisão em casos onde as variáveis são correlacionadas.
 
