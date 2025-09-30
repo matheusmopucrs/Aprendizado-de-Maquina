@@ -82,6 +82,8 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **c
 -  Imagem de Referência:
      
  <img width="853" height="563" alt="image" src="https://github.com/user-attachments/assets/9158fe35-0e83-453a-9502-59e4cfeb99a6" />
+
+ --
   
 - A visualização gráfica da árvore facilita a compreensão do fluxo de decisões tomadas pelo modelo, permitindo a extração de insights claros sobre as regras que determinam a classificação.
 -  Imagem de Referência:
@@ -138,5 +140,6 @@ O trabalho será entregue impreterivelmente até 30/09/2025, conforme solicitado
 
 ---
 
-**Lucca Iãnez & Matheus Magri**  
+**Lucca Iãnez & Matheus Magri** 
+
 ```
