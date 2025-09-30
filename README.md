@@ -60,7 +60,7 @@ O foco central deste trabalho é explorar a **interpretabilidade** de modelos de
   
   <img width="526" height="609" alt="image" src="https://github.com/user-attachments/assets/26c43370-e637-4695-b9d1-feccacb19928" />
 
-Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **taticamente coerentes** com a realidade do futebol. As *features* mais importantes influenciam a classificação exatamente na direção esperada para cada posição.
+Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **coerentes** com a realidade do futebol. As *features* mais importantes influenciam a classificação exatamente na direção esperada para cada posição.
 
 | Feature | Direção de Alto Valor (Cor Rosa/Vermelha) | Impacto na Previsão | Coerência Tática |
 | :--- | :--- | :--- | :--- |
@@ -68,7 +68,7 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **t
 | **Clr/90s** (Cortas/Clearances por 90 min) | Alto valor | Puxa a previsão para **posições defensivas (Defensores)**. | Ações defensivas primárias, esperadas de zagueiros e laterais defensivos. |
 | **PrgP/90s** (Passes Progressivos por 90 min) | Alto valor | Puxa a previsão para **posições de Meio-Campo** (Meias e Volantes). | Indicador-chave de jogadores que constroem o jogo e conectam a defesa ao ataque. |
  
-- Considerações Finais: Ele funciona com base na proximidade dos dados no espaço das features, ou seja, classifica uma nova amostra olhando para os seus vizinhos mais próximos, o que é intuitivo localmente, mas difícil de resumir globalmente.
+- Considerações Finais: Ele funciona com base na proximidade dos dados no espaço das features, ou seja, classifica uma nova amostra olhando para os seus vizinhos mais próximos, o que é intuitivo localmente, mas difícil de ser interpretado.
 
 
 
