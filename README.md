@@ -72,6 +72,10 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **c
 
 
 
+---
+
+
+
 ### 2. Árvore de Decisão
  
 - Realizamos uma análise detalhada da árvore gerada, o que possibilitou identificar as features mais importantes e compreender como cada uma delas influencia o processo de classificação.
@@ -86,6 +90,11 @@ Análisando o SHAP, confirmou-se que o modelo KNN aprendeu padrões que são **c
 
 
 - Considerações Finais: A Árvore de Decisão é um modelo altamente interpretável, pois estrutura suas decisões em regras simples e hierárquicas que podem ser facilmente visualizadas e entendidas. Essa transparência torna o modelo especialmente útil para aplicações que exigem explicações claras e confiáveis das decisões automatizadas, como demonstrado nas imagens de referência acima.
+
+
+
+---
+
 
   
 ### 3. Naïve Bayes (GaussianNB)
@@ -107,7 +116,7 @@ Obs. Entretanto, a hipótese de independência entre as features, embora simplif
 - A **Árvore de Decisão** teve desempenho competitivo (~90%) e alta interpretabilidade, com regras claras e fácil visualização das features mais influentes.  
 - O **Naïve Bayes**, apesar de mais simples, entregou resultados razoáveis (~88%) e permitiu uma análise probabilística das decisões.
 
-Concluímos que a escolha do modelo ideal depende do equilíbrio desejado entre performance e interpretabilidade. Em certos contextos críticos, a explicabilidade pode ser mais importante que a acurácia máxima. Apresar de não estarmos satisfeitos com as métricas do Naïve Bayes, ele pode ser muito útil, já que sua alta iterpretabilidade pode favorecer em cenários específicos.
+Concluímos que a escolha do modelo ideal depende do equilíbrio desejado entre performance e interpretabilidade. Apresar de não estarmos satisfeitos com as métricas do Naïve Bayes, ele pode ser muito útil, já que sua alta iterpretabilidade pode favorecer em cenários específicos. Por exemplo, em certos contextos críticos, como na área da saúde ou do direito, a explicabilidade pode ser mais importante que a acurácia máxima.
 
 ---
 
